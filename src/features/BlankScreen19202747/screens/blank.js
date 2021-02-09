@@ -21,6 +21,7 @@ import { SlideMenuIcon } from "../../../navigator/slideMenuIcon"
 class Blank extends React.Component {
   constructor(props) {
     super(props)
+
     this.state = {}
   }
   static navigationOptions = ({ navigation }) => {
@@ -28,15 +29,9 @@ class Blank extends React.Component {
   }
 
   render = () => (
-    <ImageBackground
-      source={{
-        uri:
-          "https://d3tklmlrp1a8c2.cloudfront.net/media/resources/project/24395/494e81f8-9442-4cd0-b248-6f1b5351c5a0.png"
-      }}
-      style={styles.ImageBackground_1}
-    >
+    <ImageBackground style={styles.ImageBackground_1}>
       <Button
-        title=""
+        title="."
         style={styles.Button_3}
         onPress={() =>
           this.props.navigation.navigate("WelcometotheFunRun10202733")
@@ -50,10 +45,13 @@ const styles = StyleSheet.create({
   ImageBackground_1: { width: 0, backgroundSize: "contain" },
   Button_3: { width: "46%", marginTop: 42 }
 })
+
 const mapStateToProps = state => {
   return {}
 }
+
 const mapDispatchToProps = () => {
   return {}
 }
+
 export default connect(mapStateToProps, mapDispatchToProps)(Blank)
